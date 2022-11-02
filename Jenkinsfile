@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Lanzar Pytest') {
       steps {
-        bat 'pytest LoginFer_test.py'
+        bat 'pytest -v LoginFer_test.py'
       }
     }
   }
