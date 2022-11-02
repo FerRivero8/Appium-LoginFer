@@ -11,5 +11,10 @@ pipeline {
         bat 'pytest LoginFer_test.py'
       }
     }
+    stage('Allure Report') {
+      steps {
+        bat 'allure serve "reports" '
+      }
+    }
   }
 }
