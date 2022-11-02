@@ -11,9 +11,9 @@ pipeline {
         bat 'pytest LoginFer_test.py'
       }
     }
-    stage('Allure Report') {
+    stage('SonarQube') {
       steps {
-        bat 'allure serve "reports" '
+        bat 'sonar-scanner.bat'
       }
     }
   }
