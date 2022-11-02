@@ -16,5 +16,10 @@ pipeline {
         bat 'sonar-scanner.bat'
       }
     }
+    stage('Abrir Sonar') {
+      steps {
+        bat 'start http://localhost:9000/'
+      }
+    }
   }
 }
