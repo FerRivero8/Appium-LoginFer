@@ -40,7 +40,7 @@ def test_invalidCredentials(test_setup):
     driver.find_element("id", 'com.example.mylogin:id/inputPassword').send_keys("admin")
     driver.find_element("id", 'com.example.mylogin:id/btnLogin').click()
     assert ".MainActivity" in driver.current_activity
-
+"""
 @allure.description("Ingresar credenciales inválidas y permanecer en la pantalla Login (parte 2).")
 def test_invalidCredentials2(test_setup):
     driver.find_element("id", 'com.example.mylogin:id/inputUsername').send_keys("fernando")
@@ -49,7 +49,7 @@ def test_invalidCredentials2(test_setup):
     try:
         assert ".DialerActivity" in driver.current_activity
     finally:
-        allure.attach(driver.get_screenshot_as_png(), name="Invalid Credentials", attachment_type=AttachmentType.PNG)
+        allure.attach(driver.get_screenshot_as_png(), name="Invalid Credentials", attachment_type=AttachmentType.PNG) """
     
 @allure.description("Acceder a la pantalla de registro.")
 def test_userRegister(test_setup):
