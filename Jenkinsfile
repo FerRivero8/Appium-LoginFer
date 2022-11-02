@@ -6,9 +6,9 @@ pipeline {
         bat 'python --version'
       }
     }
-    stage('hello') {
+    stage('Lanzar Pytest') {
       steps {
-        bat 'pytest --version'
+        bat 'pytest LoginFer_test.py'
       }
     }
   }
