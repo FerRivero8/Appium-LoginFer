@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Abrir Appium') {
-      steps {
-        bat 'appium'
-      }
-    }
     stage('version') {
       steps {
         bat 'python --version'
