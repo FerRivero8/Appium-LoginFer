@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('Abrir Appium') {
+      steps {
+        bat 'appiumt'
+      }
+    }
     stage('version') {
       steps {
         bat 'python --version'
@@ -9,16 +14,6 @@ pipeline {
     stage('Lanzar Pytest') {
       steps {
         bat 'pytest LoginFer_test.py'
-      }
-    }
-    stage('SonarQube') {
-      steps {
-        bat 'sonar-scanner.bat'
-      }
-    }
-    stage('Abrir Sonar') {
-      steps {
-        bat 'start http://localhost:9000/'
       }
     }
   }
