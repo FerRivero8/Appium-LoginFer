@@ -9,7 +9,7 @@ pipeline {
     stage('Appium') {
       steps {
         echo "Abriendo Appium..."
-        bat 'appium'
+        bat "appium"
       }
     }
     stage('Lanzar Pytest') {
