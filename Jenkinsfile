@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Abrir Appium') {
       steps {
-        bat 'appiumt'
+        bat 'appium'
       }
     }
     stage('version') {
