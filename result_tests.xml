@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="62.560" timestamp="2022-11-02T13:08:00.584477" hostname="11LAP5CG00129ZR"><testcase classname="LoginFer_test" name="test_validCredentials" time="14.149" /><testcase classname="LoginFer_test" name="test_invalidCredentials" time="15.957" /><testcase classname="LoginFer_test" name="test_invalidCredentials2" time="16.178"><failure message="assert '.DialerActivity' in '.MainActivity'&#10; +  where '.MainActivity' = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;92faaff6-761e-4e02-b161-0a1b1ca58597&quot;)&gt;.current_activity">test_setup = None
+
+    @allure.description("Ingresar credenciales inválidas y permanecer en la pantalla Login (parte 2).")
+    def test_invalidCredentials2(test_setup):
+        driver.find_element("id", 'com.example.mylogin:id/inputUsername').send_keys("fernando")
+        driver.find_element("id", 'com.example.mylogin:id/inputPassword').send_keys("admin")
+        driver.find_element("id", 'com.example.mylogin:id/btnLogin').click()
+        try:
+&gt;           assert ".DialerActivity" in driver.current_activity
+E           assert '.DialerActivity' in '.MainActivity'
+E            +  where '.MainActivity' = &lt;appium.webdriver.webdriver.WebDriver (session="92faaff6-761e-4e02-b161-0a1b1ca58597")&gt;.current_activity
+
+LoginFer_test.py:50: AssertionError</failure></testcase><testcase classname="LoginFer_test" name="test_userRegister" time="15.319" /></testsuite></testsuites>
