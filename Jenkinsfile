@@ -8,7 +8,12 @@ pipeline {
     }
     stage('Pytest') {
       steps {
-        bat 'pytest -v LoginFer_test.py'
+        bat 'pytest LoginFer_test.py --junitxml="result_tests.xml"'
+      }
+    }
+    stage('Cobertura') {
+      steps {
+        bat 'pytest --cov-report xml --cov .'
       }
     }
     stage('SonarQube') {
